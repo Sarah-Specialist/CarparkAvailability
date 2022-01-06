@@ -1,9 +1,7 @@
 
 (async () => {
-
-    const API = axios.create({
-        baseURL: "https://api.data.gov.sg/v1"
-    });
+    
+    const res = await axios.get("https://api.data.gov.sg/v1/transport/carpark-availability");
 
     console.log("status", res.status);
 
@@ -12,13 +10,13 @@ let timeStamp = res.data.items[0].timestamp
 console.log('TimeStamp: ', timeStamp);
 
 let dateStamp = timeStamp.slice(0, 10);
-let dateOutput = document.getElementsByClassName('date');
-dateOutput.innerText(dateStamp);
+let dateOutput = document.getElementsByClassName('dateOutput');
+dateOutput.innerText = 'dateStamp';
 console.log('Date: ', dateStamp);
 
 let TimeStamp = timeStamp.slice(11, 16);
-let timeOutput = document.getElementsByClassName('time');
-timeOutput.innerText(TimeStamp);
+let timeOutput = document.getElementsByClassName('timeOutput');
+timeOutput.innerText = 'TimeStamp';
 console.log('Time: ', TimeStamp);
 
 
