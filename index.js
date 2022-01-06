@@ -1,28 +1,11 @@
-/*var requirejs = require('./requirejs');
-
-requirejs.config({
-    nodeRequire: require
-});
-
-requirejs.config({
-    //By default load any module IDs from js/lib
-    baseUrl: 'js/lib',
-    //except, if the module ID starts with "app",
-    //load it from the js/app directory. paths
-    //config is relative to the baseUrl, and
-    //never includes a ".js" extension since
-    //the paths config could be for a directory.
-    paths: {
-        app: '../app'
-    }
-});
-*/
-const API = require('./instance.js');
 
 (async () => {
-    let res = await API.get(`transport/carpark-availability`);
-    console.log("status", res.status);
 
+    const API = axios.create({
+        baseURL: "https://api.data.gov.sg/v1"
+    });
+
+    console.log("status", res.status);
 
 // Convert timestamp into date and time outputs
 let timeStamp = res.data.items[0].timestamp
