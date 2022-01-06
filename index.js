@@ -1,4 +1,4 @@
-var requirejs = require('./requirejs');
+/*var requirejs = require('./requirejs');
 
 requirejs.config({
     nodeRequire: require
@@ -16,7 +16,7 @@ requirejs.config({
         app: '../app'
     }
 });
-
+*/
 const API = require('./instance.js');
 
 (async () => {
@@ -43,6 +43,7 @@ console.log('Time: ', TimeStamp);
 const clickButtonEl = document.querySelector("submit");
 clickButtonEl.addEventListener('click', (event) => {
     event.preventDefault();
+    console.log("button clicked");
 
     // Extracting selected array
     let dataset = res.data.items[0].carpark_data;
