@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script data-main="index.js" src="/requirejs/require.js"></script>
+    <title>Carpark Availability</title>
+</head>
+<body>
+    <div class="container">
+        <div class="inputDiv">
+    <h1>Carpark Availability</h1>
+    <form>
+        <div>
+            <label for="carparkNumber">Carpark Number:</label>
+            <input type="text" name="carpark_number" id="carpark_number" placeholder="For example: HE12" autofocus /><br><br>
+         </div>   
+        <button class="btn btn-success" type="submit">Check Availability NOW</button>
+    </form>
+    </div>
+    <div class="outputDiv">
+        <h1>Results</h1>
+        <div class="numDt">
+            <p>Carpark Number:&nbsp;<span class="numberOutput"></span></p>
+            <p>Date:&nbsp;<span class="dateOutput"></span></p>
+            <p>Time:&nbsp;<span class="timeOutput"></span></p>
+        </div>
+        <table style="width:100%">
+            <tr>
+                <th>Total lots:</th>
+                <th>Lots type:</th>
+                <th>Lots available:</th>
+            </tr>
+            <tr>
+                <td class="lots"></td>
+                <td class="type"></td>
+                <td class="available"></td>
+            </tr>
+            <tr>
+                <td class="lotsOutput"></td>
+                <td class="typeOutput"></td>
+                <td class="availableOutput"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

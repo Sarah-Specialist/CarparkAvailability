@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background-image:url('https://images.pexels.com/photos/938580/pexels-photo-938580.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    min-width: 100vw;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+div {
+    padding: 20px 0;
+}
+
+.inputDiv {
+    color: white;
+    padding: 20px;
+    overflow-x: 100vw; 
+    overflow-y: 100vh;
+}
+
+.outputDiv {
+    background-color: white;
+    opacity: 80%;
+    padding: 20px -5px 50px 0;
+    position: absolute;
+    left: 0;
+    min-width: 100vw;
+    font-weight: bold;
+    overflow-x: 100vw; 
+    overflow-y: 100vh;
+}
+
+.numDt {
+    padding-left: 40px;
+}
+
+table {
+    text-align: center;
+    border: solid 1px black;
+    width: 100vw;
+    padding: 0 20px;
+}
+
+tr {
+    text-align: center;
+}
+th, td {
+    width: 33%;
+}
+
+.lotsOutput {
+    height: 30px;
+    text-align: center;
+}
+
+.typeOutput {
+    height: 30px;
+    text-align: center;
+}
+
+.availableOutput {
+    height: 30px;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
