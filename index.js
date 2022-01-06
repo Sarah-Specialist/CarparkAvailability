@@ -1,6 +1,6 @@
 const clickButtonEl = document.getElementById("submit");
 
-clickButtonEl.addEventListener('click', (event) => {
+function handleClickEvent(event) {
     console.log("button clicked");
     event.preventDefault();
 
@@ -27,6 +27,7 @@ clickButtonEl.addEventListener('click', (event) => {
 
         // Extracting selected array
         let dataset = res.data.items[0].carpark_data;
+        console.log(dataset);
         let filteredCarpark = dataset
         .filter(dataset => dataset.carpark_number === inputString)
         .map(dataset => dataset.carpark_info);
@@ -48,4 +49,4 @@ clickButtonEl.addEventListener('click', (event) => {
         availableOutput.innerText(lotsAvailable);
         console.log('Lots available: ', lotsAvailable);
     })();
-});
+};
