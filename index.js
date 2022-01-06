@@ -1,6 +1,6 @@
-const clickButtonEl = document.querySelector("submit");
+const clickButtonEl = document.getElementsByClassName("submit");
 
-clickButtonEl.addEventListener('click', function(event){
+clickButtonEl.addEventListener('click', (event) => {
     console.log("button clicked");
     event.preventDefault();
 
@@ -9,7 +9,7 @@ clickButtonEl.addEventListener('click', function(event){
         console.log("status", res.status);
 
         // Convert timestamp into date and time outputs
-        let timeStamp = res.data.items[0].timestamp
+        let timeStamp = res.data.items[0].timestamp;
         console.log('TimeStamp: ', timeStamp);
 
         let dateStamp = timeStamp.slice(0, 10);
@@ -33,17 +33,17 @@ clickButtonEl.addEventListener('click', function(event){
         console.log(filteredCarpark);
     
         //Extracting information from selected array and inserting extracted value
-        let lotsOutput = document.querySelector('.lotsOutput');
+        let lotsOutput = document.getElementsByClassName('lotsOutput');
         let totalLots = filteredCarpark[0][0].total_lots;
         lotsOutput.innerText(totalLots);
         console.log('Total lots: ', totalLots);
 
-        let typeOutput = document.querySelector('.typeOutput');
+        let typeOutput = document.getElementsByClassName('typeOutput');
         let lotType = filteredCarpark[0][0].lot_type;
         typeOutput.innerText(lotType);
         console.log('Lot type: ', lotType);
 
-        let availableOutput = document.querySelector('.availableOutput');
+        let availableOutput = document.getElementsByClassName('availableOutput');
         let lotsAvailable = filteredCarpark[0][0].lots_available;
         availableOutput.innerText(lotsAvailable);
         console.log('Lots available: ', lotsAvailable);
