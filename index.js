@@ -1,6 +1,4 @@
 const clickButtonEl = document.querySelector("submit");
-const input = document.querySelector("#carparkNumber");
-
 
 clickButtonEl.addEventListener('click', function(event){
     console.log("button clicked");
@@ -24,6 +22,7 @@ clickButtonEl.addEventListener('click', function(event){
         timeOutput.innerText = 'TimeStamp';
         console.log('Time: ', TimeStamp);
 
+        const input = document.querySelector("#carparkNumber");
         const inputString = JSON.stringify(input.value);
 
         // Extracting selected array
