@@ -32,10 +32,18 @@ function handleClickEvent(event) {
         // Extracting selected array
         let dataset = res.data.items[0].carpark_data;
         console.log(dataset);
-        let filteredCarpark = dataset.filter("carpark_number", input)
-        .map(dataset => dataset.carpark_info);
+        let filteredCarpark = dataset.filter(function(dataset) {
+           if (dataset.carpark_number === "HLM") {
+               return dataset;
+           };
+        })
         console.log(filteredCarpark);
-    
+        let carparkInfo = Object.keys(filteredCarpark);
+        console.log(carparkInfo);
+        
+        //.map(dataset => dataset.carpark_info);
+        
+    /*
         //Extracting information from selected array and inserting extracted value
         let lotsOutput = document.getElementById('lotsOutput');
         let totalLots = filteredCarpark[0][0].total_lots;
@@ -50,6 +58,6 @@ function handleClickEvent(event) {
         let availableOutput = document.getElementById('availableOutput');
         let lotsAvailable = filteredCarpark[0][0].lots_available;
         availableOutput.innerText(lotsAvailable);
-        console.log('Lots available: ', lotsAvailable);
+        console.log('Lots available: ', lotsAvailable);*/
     })();
 };
