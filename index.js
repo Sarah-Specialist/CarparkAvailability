@@ -32,15 +32,7 @@ function handleClickEvent(event) {
         // Extracting selected array
         let dataset = res.data.items[0].carpark_data;
         console.log(dataset);
-        let filteredCarpark = dataset.fetch();
-        filteredCarpark.filter(dataset, carpark_number) {
-            return new Promise((resolve) => {
-                resolve dataset.filter((dataset) => dataset[carpark_number] === input));
-            }
-        }
-        database.filter("carpark_number", input);
-
-
+        let filteredCarpark = dataset.filter("carpark_number", input)
         .map(dataset => dataset.carpark_info);
         console.log(filteredCarpark);
     
