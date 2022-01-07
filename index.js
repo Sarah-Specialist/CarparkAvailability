@@ -38,26 +38,33 @@ function handleClickEvent(event) {
            };
         })
         console.log(filteredCarpark);
-        let carparkInfo = Object.keys(filteredCarpark);
+        //let carparkInfo = Object.keys(filteredCarpark);
+
+        let carparkInfo = filteredCarpark.map(e => {
+            return e.carpark_info;
+        })
         console.log(carparkInfo);
-        
-        //.map(dataset => dataset.carpark_info);
-        
-    /*
+
+        let infoString = JSON.stringify(carparkInfo);
+        console.log('infoString', infoString);
+    
         //Extracting information from selected array and inserting extracted value
         let lotsOutput = document.getElementById('lotsOutput');
-        let totalLots = filteredCarpark[0][0].total_lots;
+        let totalLots = infoString.slice(17, 20);
+        //filteredCarpark[0][0].total_lots;
         lotsOutput.innerText(totalLots);
         console.log('Total lots: ', totalLots);
 
         let typeOutput = document.getElementById('typeOutput');
-        let lotType = filteredCarpark[0][0].lot_type;
+        let lotType = infoString.slice(34, 35);
+        //filteredCarpark[0][0].lot_type;
         typeOutput.innerText(lotType);
         console.log('Lot type: ', lotType);
 
         let availableOutput = document.getElementById('availableOutput');
-        let lotsAvailable = filteredCarpark[0][0].lots_available;
+        let lotsAvailable = infoString.slice(54,58);
+        //filteredCarpark[0][0].lots_available;
         availableOutput.innerText(lotsAvailable);
-        console.log('Lots available: ', lotsAvailable);*/
+        console.log('Lots available: ', lotsAvailable);
     })();
 };
