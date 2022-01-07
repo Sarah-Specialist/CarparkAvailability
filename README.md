@@ -28,7 +28,7 @@ This is my individual project for the SkillsUnion/NTU Software Developer Immersi
 
 ## Illustrations
 
-![]()
+![](https://github.com/Sarah-Specialist/CarparkAvailability/blob/e7bdf15493e4fe71219faa2d429aa6c821874810/image.jpg)
 
 ## Getting Started
 ### Usage
